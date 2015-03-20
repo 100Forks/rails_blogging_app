@@ -9,3 +9,9 @@
 
 <p><%= link_to "Edit this blog post", edit_post_path(@post) %></p>
 <p><%= link_to "Return to blog list", posts_path %></p>
+
+<p>
+  <%= link_to "Delete Post", post_path(@post),
+    :data => {:confirm => "Do you really want to delete this post?",
+      :method => "delete"} %>
+</p>
