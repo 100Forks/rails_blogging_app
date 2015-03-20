@@ -2,8 +2,8 @@
 
 <h1>My Blog Posts</h1>
 
-<ul>
+<ul class="lead list-unstyled">
   <% @posts.each do |post| %>
-    <li><%= post.name %></li>
+    <li><%= post.created_at.strftime("%B %d, %Y") %> - <%= post.title %></li>
   <% end %>
 </ul>
