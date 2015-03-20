@@ -2,6 +2,8 @@
 
 <h1>My Blog Posts</h1>
 
+<p><%= link_to "Add a new post", new_post_path %></p>
+
 <ul class="lead list-unstyled">
   <% @posts.each do |post| %>
     <li><%= post.created_at.strftime("%B %d, %Y") %> - <%= link_to post.title, post_path(post) %></li>
