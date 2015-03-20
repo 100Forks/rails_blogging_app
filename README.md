@@ -65,4 +65,4 @@ https://github.com/dmmoody/rails_blogging_app/issues
 License
 -------
 
-MIT License. Copyright 2014 Duane M. Moody | <a href="http://moodyco.de">MoodyCode</a>
+MIT License. Copyright 2015 Duane M. Moody | <a href="http://moodyco.de">MoodyCode</a>
