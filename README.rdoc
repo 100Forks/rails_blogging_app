@@ -1,28 +1,68 @@
-== README
+Rails Blogging App
+==================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+by <a href="http://duanemoody.io" target="_blank">Duane M. Moody</a>.
 
-Things you may want to cover:
+Rails Blogging App will provide you a simple yet elegant blogging solution.
 
-* Ruby version
+- You will be able to post your deepest thoughts in a blog entry with a title and date.
+- You will be able to see all your blog posts listed by title and have them link to each post so that you can revisit past entries.
+- You will be able to update or delete any of your posts so that you can revise your thoughts later.
 
-* System dependencies
+Installation
+------------
 
-* Configuration
+Install Rails Blogging App by first cloning the repository.
+```
+$ git clone http://github.com/dmmoody/rails_blogging_app.git
+```
 
-* Database creation
+Install all of the required gems:
+```
+$ bundle install
+```
 
-* Database initialization
+Database Setup
+--------------
 
-* How to run the test suite
+This app uses PostreSQL.
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following in the command line:
+```
+$ rake db:create
+$ rake db:migrate
+$ rake db:test:prepare
+```
 
-* Deployment instructions
+Running the app
+---------------
 
-* ...
+To run the app, ```\cd``` into the root folder for the app and start the webserver:
+```
+$ rails server
+```
 
+In your web browser, go to http://localhost:3000
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Contribute
+----------
+
+- Issue Tracker: github.com/dmmoody/rails_blogging_app/issues
+- Source Code: github.com/dmmoody/rails_blogging_app
+
+Support
+-------
+
+If you are having issues, please let me know at: dmmoody@gmail.com
+
+Bug reports
+-----------
+
+If you discover any bugs, feel free to create an issue on GitHub. Please add as much information as possible to help me fixing the possible bug. I also encourage you to help even more by forking and sending me a pull request.
+
+https://github.com/dmmoody/rails_blogging_app/issues
+
+License
+-------
+
+MIT License. Copyright 2014 Duane M. Moody | <a href="http://moodyco.de">MoodyCode</a>
