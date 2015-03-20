@@ -47,8 +47,8 @@ In your web browser, go to http://localhost:3000
 Contribute
 ----------
 
-- Issue Tracker: github.com/dmmoody/rails_blogging_app/issues
-- Source Code: github.com/dmmoody/rails_blogging_app
+- Issue Tracker: https://github.com/dmmoody/rails_blogging_app/issues
+- Source Code: https://github.com/dmmoody/rails_blogging_app
 
 Support
 -------
