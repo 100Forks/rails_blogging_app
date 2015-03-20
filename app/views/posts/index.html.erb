@@ -4,6 +4,6 @@
 
 <ul class="lead list-unstyled">
   <% @posts.each do |post| %>
-    <li><%= post.created_at.strftime("%B %d, %Y") %> - <%= post.title %></li>
+    <li><%= post.created_at.strftime("%B %d, %Y") %> - <%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
