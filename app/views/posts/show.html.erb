@@ -10,20 +10,18 @@
 <ul class='list-unstyled'>
   <% @comments.each do |comment| %>
     <li><%= comment.author %> - <%= comment.entry %> |
-      <%= link_to "Edit", edit_post_comment_path(:post_id) %> |
-      <%= link_to "Delete", post_comment_path(comment),
-                                    :data => {:confirm => "Are you sure?",
-                                              :method => 'delete'} %></li>
+      <%= link_to "Edit" %> |
+      <%= link_to "Delete" %></li>
   <% end %>
 </ul>
 
-<p><%= link_to "Leave a comment", new_post_comment_path(@post) %></p>
+<p><%= link_to "Leave a comment", new_post_comment_path(@post), class: "btn btn-xs btn-default" %></p>
 
-<p><%= link_to "Edit this blog post", edit_post_path(@post) %></p>
-<p><%= link_to "Return to blog list", posts_path %></p>
+<p><%= link_to "Edit this blog post", edit_post_path(@post), class: "btn btn-xs btn-default" %></p>
+<p><%= link_to "Return to blog list", posts_path, class: "btn btn-xs btn-default" %></p>
 
 <p>
   <%= link_to "Delete Post", post_path(@post),
     :data => {:confirm => "Do you really want to delete this post?",
-      :method => "delete"} %>
+      :method => "delete"}, class: "btn btn-xs btn-danger" %>
 </p>
