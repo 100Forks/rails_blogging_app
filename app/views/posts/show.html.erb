@@ -9,7 +9,11 @@
 
 <ul class='list-unstyled'>
   <% @comments.each do |comment| %>
-    <li><%= comment.author %> - <%= comment.entry %></li>
+    <li><%= comment.author %> - <%= comment.entry %> |
+      <%= link_to "Edit", edit_post_comment_path(:post_id) %> |
+      <%= link_to "Delete", post_comment_path(comment),
+                                    :data => {:confirm => "Are you sure?",
+                                              :method => 'delete'} %></li>
   <% end %>
 </ul>
 
