@@ -1,9 +1,15 @@
 <%= render 'layouts/errors', :object => @post %>
 
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :entry %>
-  <%= f.text_area :entry %>
-  <%= f.submit %>
+<%= form_for @post, :html => {:class => "form-horizontal"}  do |f| %>
+  <div class="form-group">
+    <%= f.label :title, class: "control-label" %>
+    <%= f.text_field :title, class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :entry, class: "control-label" %>
+    <%= f.text_area :entry, class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: 'btn btn-default' %>
+  </div>
 <% end %>
