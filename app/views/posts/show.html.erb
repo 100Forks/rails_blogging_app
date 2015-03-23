@@ -10,8 +10,10 @@
 <ul class='list-unstyled'>
   <% @comments.each do |comment| %>
     <li><%= comment.author %> - <%= comment.entry %> |
-      <%= link_to "Edit" %> |
-      <%= link_to "Delete" %></li>
+      <%= link_to "Edit", [:edit, @post, comment] %> |
+      <%= link_to "Delete", [@post, comment],
+        :data => {:confirm => "Do you really want to delete this comment?",
+          :method => "delete"}, class: "btn btn-xs btn-danger" %></li>
   <% end %>
 </ul>
 
