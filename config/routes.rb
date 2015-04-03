@@ -6,7 +6,4 @@ Rails.application.routes.draw do
     resources :comments, :except => [:show, :index]
   end
 
-  resources :users do
-    resources :posts
-  end
 end

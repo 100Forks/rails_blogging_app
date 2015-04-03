@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   def home
     @posts = Post.order('created_at DESC')
   end
-  
+
   def index
     @posts = Post.order('created_at DESC')
   end
@@ -50,6 +50,6 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.require(:post).permit(:title, :entry)
+    params.require(:post).permit(:title, :entry, :user_id)
   end
 end
