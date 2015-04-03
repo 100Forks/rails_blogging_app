@@ -19,12 +19,12 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Home' %></li>
+          <li><%= link_to 'Home', '/' %></li>
           <li><%= link_to 'New Post', new_post_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><span class="navbar-text">Welcome, <%= link_to current_user.username, profile_path(current_user.username) %></span></li>
+            <li><span class="navbar-text">Welcome, <%= current_user.firstname %></span></li>
             <li><button type="button" class="btn btn-default navbar-btn"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></button></li>
           <% else %>
             <li><button type="button" class="btn btn-default navbar-btn"><%= link_to 'Sign in', new_user_session_path %></button></li>

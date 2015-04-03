@@ -1,0 +1,9 @@
+<% content_for(:title, "All Blog Post") %>
+
+<h1>All Blog Posts</h1>
+
+<ul class="lead list-unstyled">
+  <% @posts.each do |post| %>
+    <li><small><%= post.created_at.strftime("%B %d, %Y") %></small> - <%= link_to post.title, post_path(post) %></li>
+  <% end %>
+</ul>

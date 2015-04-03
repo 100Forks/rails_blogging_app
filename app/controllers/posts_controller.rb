@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+
+  def home
+    @posts = Post.order('created_at DESC')
+  end
+  
   def index
     @posts = Post.order('created_at DESC')
   end
