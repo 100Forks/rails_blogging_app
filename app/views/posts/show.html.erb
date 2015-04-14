@@ -9,7 +9,7 @@
 
 <ul class='list-unstyled'>
   <% @comments.each do |comment| %>
-    <li><%= comment.author %> - <%= comment.entry %> |
+    <li><%= comment.entry %> |
       <%= link_to "Edit", [:edit, @post, comment] %> |
       <%= link_to "Delete", [@post, comment],
         :data => {:confirm => "Do you really want to delete this comment?",
@@ -20,7 +20,7 @@
 <p><%= link_to "Leave a comment", new_post_comment_path(@post), class: "btn btn-xs btn-default" %></p>
 
 <p><%= link_to "Edit this blog post", edit_post_path(@post), class: "btn btn-xs btn-default" %></p>
-<p><%= link_to "Return to blog list", posts_path, class: "btn btn-xs btn-default" %></p>
+<p><%= link_to "Return to blog list", root_path, class: "btn btn-xs btn-default" %></p>
 
 <p>
   <%= link_to "Delete Post", post_path(@post),

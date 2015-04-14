@@ -15,6 +15,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'quiet_assets'
+  gem 'pry'
 end
 
 group :test, :development do
@@ -24,4 +25,5 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem "factory_girl_rails"
 end
